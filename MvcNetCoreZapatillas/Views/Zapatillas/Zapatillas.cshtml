@@ -1,0 +1,7 @@
+﻿@model List<Zapatilla>
+
+@foreach(Zapatilla zapas in Model){
+    <a class="btn btn-success" asp-controller="Zapatillas" 
+    asp-action="ImagenZapatilla" 
+    asp-route-idproducto="@zapas.IdProducto">@zapas.Nombre</a>
+}

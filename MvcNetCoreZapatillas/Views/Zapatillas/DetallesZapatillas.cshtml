@@ -1,0 +1,17 @@
+﻿@model Zapatilla
+
+<h4>Nombre: @Model.Nombre</h4>
+<p>@Model.Descripcion</p>
+<p>Precio: @Model.Precio</p>
+
+<div class="contenido">
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var id = "@Model.IdProducto";
+    $('.contenido').load("/Zapatillas/_PartialZapatillas/?id=" + id);
+});
+</script>
